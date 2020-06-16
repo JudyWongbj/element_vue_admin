@@ -116,8 +116,9 @@ const config = {
       }
     },
     devServer: {
-      port: 8080, // 端口地址
-      open: false, // 是否自动打开浏览器页面
+      port: 8080, // 端口地址,
+      before: require('../mock/mock-server.js'),
+      open: true, // 是否自动打开浏览器页面
       host: '0.0.0.0', // 指定使用一个 host，默认是 localhost
       https: false, // 使用https提供服务
       disableHostCheck: true,
